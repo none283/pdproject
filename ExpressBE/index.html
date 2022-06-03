@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Required meta tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="./public/fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="./public/css/owl.carousel.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./public/css/bootstrap.min.css">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="./public/css/style.css">
+
+    <link rel="stylesheet" href="./public/css/common/common.3e7331bf95.css">
+    <link rel="stylesheet" href="./public/css/directory/directory.1815138981.css">
+
+    <link rel="stylesheet" href="./public/css/index.css">
+    <title>Ву Хоанг Нам Куан - 211-728</title>
+</head>
+
+<style>
+    html,
+    body {
+        height: 100%;
+        margin: 0;
+    }
+
+    .mydataitemclass {
+        display: none;
+        top: 10px;
+    }
+
+    .mymenulistitem {
+        width: 100%;
+        border-radius: 20px;
+        padding: 5px 0;
+        text-align: center;
+        background-color: lightblue;
+        margin-top: 10px;
+    }
+
+    #mymenudropdownid {
+        max-height: 250px;
+        overflow-y: auto
+    }
+
+    .hero {
+        position: fixed;
+        min-height: 100%;
+        width: 100%;
+        top: 0;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        z-index: -100;
+    }
+
+    body {
+        height: 100%;
+    }
+
+    .mydropdownlistmenu {
+        margin-left: 500;
+    }
+
+    .ajax {
+        margin-top: 10px;
+        margin-left: 300px;
+    }
+</style>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="./public/js/jquery-3.3.1.min.js"></script>
+<script src="./public/js/jquery.sticky.js"></script>
+<script src="./public/js/myjs.js"></script>
+
+<body data-new-gr-c-s-check-loaded="14.1062.0" data-gr-ext-installed="">
+    <div class="site-mobile-menu">
+        <div class="site-mobile-menu-header">
+            <div class="site-mobile-menu-close mt-3">
+                <span class="icon-close2 js-menu-toggle"></span>
+            </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+    </div>
+
+    <header class="site-navbar" role="banner">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+                        <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
+                            <li class="has-children mydropdownlistmenu">
+                                <a><span>Список названий Вьетнамских ИТ-компаний</span></a>
+                                <ul class="dropdown arrow-top" id="mymenudropdownid">
+                                    <a class="mymenulistitem" id="menudropdown -index -1"
+                                        onclick="myFunction(1, 10)"></a>
+                                    <a class="mymenulistitem" id="menudropdown -index -2"
+                                        onclick="myFunction(2, 10)"></a>
+                                    <a class="mymenulistitem" id="menudropdown -index -3"
+                                        onclick="myFunction(3, 10)"></a>
+                                    <a class="mymenulistitem" id="menudropdown -index -4"
+                                        onclick="myFunction(4, 10)"></a>
+                                    <a class="mymenulistitem" id="menudropdown -index -5"
+                                        onclick="myFunction(5, 10)"></a>
+                                    <a class="mymenulistitem" id="menudropdown -index -6"
+                                        onclick="myFunction(6, 10)"></a>
+                                    <a class="mymenulistitem" id="menudropdown -index -7"
+                                        onclick="myFunction(7, 10)"></a>
+                                    <a class="mymenulistitem" id="menudropdown -index -8"
+                                        onclick="myFunction(8, 10)"></a>
+                                    <a class="mymenulistitem" id="menudropdown -index -9"
+                                        onclick="myFunction(9, 10)"></a>
+                                    <a class="mymenulistitem" id="menudropdown -index -10"
+                                        onclick="myFunction(10, 10)"></a>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        </div>
+    </header>
+
+    <div class="hero" style="background-image: url('./public/images/hero_1.jpg');"></div>
+
+    <header class="site-navbar" role="banner">
+        <div class="container" style="margin-left: -700px;">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+                        <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
+                            <li class="has-children mydropdownlistmenu" style="margin-top: -20px;">
+                                <a><span>Find Company</span></a>
+                                <ul class="dropdown arrow-top" id="mymenudropdownid">
+                                    <a class="mymenulistitem" id="dropdown1" onclick="FindSelect(1)">Find By Company
+                                        Name</a>
+                                    <a class="mymenulistitem" id="dropdown2" onclick="FindSelect(2)">Find By Company's
+                                        Industries</a>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+    </header>
+    <div>
+        <form class="form ajax" id="formajax">
+            <div>
+                <input style="display: flex;" id="companynameinput" type="text" name="company_name"
+                    placeholder="Company Name">
+            </div>
+            <div>
+                <input style="display: none;" id="indusnameinput" type="text" name="industries_name"
+                    placeholder="Industries Name">
+            </div>
+            <input id="submitinput" type="submit" value="Find Company">
+        </form>
+    </div>
+
+    <section id="directory-providers" class="directory-providers">
+        <div class="container directory-providers__wrap">
+            <ul class="directory-providers__list" data-pid="2058029500000">
+
+            </ul>
+        </div>
+    </section>
+</body>
+
+<script src="./public/js/common.js"></script>
+<script src="./public/js/directory.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<script src="./public/js/databasehandle.js"></script>
+
+</html>

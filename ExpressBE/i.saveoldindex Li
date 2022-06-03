@@ -1,0 +1,154 @@
+<li id="kms-solutions" class="mydataitemclass provider-card" data-sponsorship="NONE" data-position="1">
+                    <span aria-label="List position" class="provider-card__position">1</span>
+                    <div class="provider-card__intro">
+                        <div class="provider-card__header">
+                            <a href="https://kms-solutions.asia/?utm_source=themanifest.com&amp;utm_medium=referral&amp;utm_campaign=vn-it-services"
+                                target="_blank" rel="nofollow"
+                                class="provider-card__logo provider-logo track-website-visit">
+                                <img property="image"
+                                    src="https://img.shgstatic.com/clutchco-static/image/scale/50x50/s3fs-public/logos/8bdf43d17bd00ea5e7c900929c87a283_1.jpeg"
+                                    alt="KMS Solutions, Inc. Logo">
+                            </a>
+                            <h3 class="provider-card__title" title="KMS Solutions, Inc.">
+                                <a href="https://kms-solutions.asia/?utm_source=themanifest.com&amp;utm_medium=referral&amp;utm_campaign=vn-it-services"
+                                    target="_blank" rel="nofollow" class="track-website-visit">
+                                    KMS Solutions, Inc.
+                                </a>
+                            </h3>
+                        </div>
+                        <div class="rating-box">
+                            <div class="rating-box__overall">
+                                <div class="rating-box__overall-heading">
+                                    <p class="rating-box__overall-title">(3 Reviews)</p>
+                                    <a href="https://clutch.co/profile/kms-solutions?utm_source=themanifest&amp;utm_medium=profile&amp;utm_content=2058029500000#reviews"
+                                        target="_blank" rel="nofollow" class="rating-box__overall-reviews-link">
+                                        Read Full Reviews on Clutch
+                                    </a>
+                                </div>
+                                <span class="rating-box__overall-score">4.7</span>
+                            </div>
+                            <ul class="rating-box__details">
+                                <li class="rating-box__detail">
+                                    <p class="rating-box__detail-title">Scheduling</p>
+                                    <span class="rating-box__detail-score">5.0</span>
+                                    <div class="rating-box__detail-line" style="--rating: 5">
+                                        <div class="rating-box__detail-line-divider"></div>
+                                        <div class="rating-box__detail-line-divider"></div>
+                                        <div class="rating-box__detail-line-divider"></div>
+                                        <div class="rating-box__detail-line-divider"></div>
+                                    </div>
+                                </li>
+                                <li class="rating-box__detail">
+                                    <p class="rating-box__detail-title">Quality</p>
+                                    <span class="rating-box__detail-score">4.8</span>
+                                    <div class="rating-box__detail-line" style="--rating: 4.8333335">
+                                        <div class="rating-box__detail-line-divider"></div>
+                                        <div class="rating-box__detail-line-divider"></div>
+                                        <div class="rating-box__detail-line-divider"></div>
+                                        <div class="rating-box__detail-line-divider"></div>
+                                    </div>
+                                </li>
+                                <li class="rating-box__detail">
+                                    <p class="rating-box__detail-title">Cost</p>
+                                    <span class="rating-box__detail-score">4.2</span>
+                                    <div class="rating-box__detail-line" style="--rating: 4.1666665">
+                                        <div class="rating-box__detail-line-divider"></div>
+                                        <div class="rating-box__detail-line-divider"></div>
+                                        <div class="rating-box__detail-line-divider"></div>
+                                        <div class="rating-box__detail-line-divider"></div>
+                                    </div>
+                                </li>
+                                <li class="rating-box__detail">
+                                    <p class="rating-box__detail-title">NPS</p>
+                                    <span class="rating-box__detail-score">4.5</span>
+                                    <div class="rating-box__detail-line" style="--rating: 4.5">
+                                        <div class="rating-box__detail-line-divider"></div>
+                                        <div class="rating-box__detail-line-divider"></div>
+                                        <div class="rating-box__detail-line-divider"></div>
+                                        <div class="rating-box__detail-line-divider"></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="https://clutch.co/profile/kms-solutions?utm_source=themanifest&amp;utm_medium=profile&amp;utm_content=2058029500000#reviews"
+                            target="_blank" rel="nofollow" class="rating-box__overall-reviews-link mobile">
+                            Read Full Reviews on Clutch
+                        </a>
+                        <a href="https://kms-solutions.asia/?utm_source=themanifest.com&amp;utm_medium=referral&amp;utm_campaign=vn-it-services"
+                            target="_blank" rel="nofollow" class="provider-card__visit-link track-website-visit">
+                            Visit Site
+                        </a>
+                    </div>
+                    <div class="provider-card__body">
+                        <ul class="provider-card__details">
+                            <li aria-label="Budget" class="provider-card__details-item">
+                                <div class="provider-card__details-item-icon budget custom_popover"
+                                    data-content="<i>Min. Project Size</i>"></div>
+                                <span>$25,000+</span>
+                            </li>
+                            <li aria-label="Employees" class="provider-card__details-item">
+                                <div class="provider-card__details-item-icon employees custom_popover"
+                                    data-content="<i>Company Size</i>"></div>
+                                <span>250 - 999 employees</span>
+                            </li>
+                            <li aria-label="Location" class="provider-card__details-item">
+                                <div class="provider-card__details-item-icon location custom_popover"
+                                    data-content="<i>Location</i>"></div>
+                                <span><span class="locality">Ho Chi Minh City, Vietnam</span></span>
+                            </li>
+                        </ul>
+                        <div class="provider-card__summary">
+                            <p>KMS Solutions, Inc. Is a midsize IT strategy consulting company based in Ho Chi Minh
+                                City, Vietnam. The team focuses on IT strategy consulting, custom software development,
+                                and BI &amp; big data consulting &amp; SI.</p>
+                        </div>
+                        <div class="provider-card__columns">
+                            <div class="provider-card__columns-item clients-column">
+                                <p class="provider-card__heading">Clients</p>
+                                <ul class="clients-column__list">
+                                    <li class="clients-column__item">ACB Bank</li>
+                                    <li class="clients-column__item">MB Bank</li>
+                                    <li class="clients-column__item">Pactera</li>
+                                    <li class="clients-column__item">TCS</li>
+                                </ul>
+                            </div>
+                            <div class="provider-card__columns-item industries-column">
+                                <p class="provider-card__heading">Industries</p>
+                                <ul class="industries-column__list">
+                                    <li aria-label="Financial services" class="industries-column__item custom_popover"
+                                        data-content="<i>Financial services</i>">
+                                        <i class="field_pp_if_finservices"></i>
+                                    </li>
+                                    <li aria-label="Medical" class="industries-column__item custom_popover"
+                                        data-content="<i>Medical</i>">
+                                        <i class="field_pp_if_healthcare"></i>
+                                    </li>
+                                    <li aria-label="Information technology"
+                                        class="industries-column__item custom_popover"
+                                        data-content="<i>Information technology</i>">
+                                        <i class="field_pp_if_it"></i>
+                                    </li>
+                                    <li aria-label="Retail" class="industries-column__item custom_popover"
+                                        data-content="<i>Retail</i>">
+                                        <i class="field_pp_if_retail"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="provider-card__notable">
+                            <p class="provider-card__heading">Notable Project</p>
+                            <div class="provider-card__notable-text">
+                                <p>KMS Solutions, Inc. provides mobile app development for a commercial bank. They built
+                                    the app with&nbsp;ensured&nbsp;data security using many tools, including React
+                                    Native, MobX, Firebase, and&nbsp;more.</p>
+                                <blockquote>
+                                    <p>"The team was so enthusiastic and full of energy."</p>
+                                </blockquote>
+                            </div>
+                        </div>
+                        <a href="https://kms-solutions.asia/?utm_source=themanifest.com&amp;utm_medium=referral&amp;utm_campaign=vn-it-services"
+                            target="_blank" rel="nofollow" class="provider-card__visit-link mobile track-website-visit">
+                            Visit Site
+                        </a>
+                    </div>
+                </li>
