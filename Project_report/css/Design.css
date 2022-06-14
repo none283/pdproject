@@ -1,0 +1,79 @@
+h1
+{
+  color: white;
+}
+
+flex_container
+{
+    background-color: rgb(212, 241, 241);
+}
+
+#menu_text
+{
+    background-color: #99CCCC;
+    text-align: center;
+    padding: 80px;
+    border: 20px;
+    margin: 0px;
+}
+
+nav
+{
+    background-color: rgb(65, 61, 61);
+    overflow: hidden;
+    text-align: center;
+}
+
+nav a
+{
+    color: white;
+    padding: 14px 20px;
+    display: block;  /*tạo khối cho các thanh menu*/
+    text-align: center;
+    text-decoration: none;
+    float: left;
+}
+footer
+{
+    color: whitesmoke;
+    background-color: rgb(65, 61, 61);
+    padding: 10px 20px;
+}
+
+footer a
+{
+    color: white;
+}
+
+/* styling the table  */
+
+table
+{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table td, table th
+{
+    border: 1px solid ;
+    padding: 8px;
+}
+
+table th
+{
+    background-color: #99CCCC;
+}
+
+table td:nth-last-child(even){background-color: rgb(206, 231, 223);}
+
+.menu1:hover
+{
+    background-color: aliceblue;
+    color: black
+}
+
+#video_demo
+{
+    max-width: 90%;
+    padding-left: 20px;
+}
