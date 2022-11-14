@@ -2,13 +2,13 @@ $.ajax({
     url:'/database',
     type:'GET',
 })
-.then(data=>{    
+.then(data=>{
+    console.log(data)
     for (let i = 0; i < data.length; i++) {
         const element = data[i];
 
         var item = $(`
-        <li id="${element.id_name}" class="mydataitemclass provider-card" data-sponsorship="NONE"
-        data-position="${element.id}">
+        <li id="${element.id_name}" class="mydataitemclass provider-card" data-sponsorship="NONE" data-position="${element.id}">
         <span aria-label="List position" class="provider-card__position">${element.id}</span>
         <div class="provider-card__intro">
             <div class="provider-card__header">

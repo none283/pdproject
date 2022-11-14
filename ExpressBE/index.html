@@ -21,7 +21,7 @@
 
     <link rel="stylesheet" href="./public/css/common/common.3e7331bf95.css">
     <link rel="stylesheet" href="./public/css/directory/directory.1815138981.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./public/css/index.css">
     <title>Ву Хоанг Нам Куан - 211-728</title>
 </head>
@@ -75,6 +75,68 @@
         margin-top: 10px;
         margin-left: 300px;
     }
+
+    input[type=text] {
+        padding: 6px;
+        padding-left: 23px;
+        margin-top: 0px;
+        font-size: 17px;
+        border: none;
+    }
+
+    button {
+        float: left;
+        padding: 6px 10px;
+        margin-top: -35.5px;
+        margin-left: 252.3px;
+        background: #ddd;
+        font-size: 17px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .search-container button:hover {
+        background: #ccc;
+    }
+
+    .findbutton{
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 6px 12px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        background-color: white; 
+        color: black; 
+    }
+
+    .findbutton:hover {
+        background-color: #008CBA;
+        color: white;
+    }
+
+    .findbutton2{
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        background-color: white; 
+        color: black; 
+    }
+
+    .findbutton2:hover {
+        background-color: #008CBA;
+        color: white;
+    }
 </style>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -83,23 +145,23 @@
 <script src="./public/js/myjs.js"></script>
 
 <body data-new-gr-c-s-check-loaded="14.1062.0" data-gr-ext-installed="">
-    <div class="site-mobile-menu">
+    <!-- <div class="site-mobile-menu">
         <div class="site-mobile-menu-header">
             <div class="site-mobile-menu-close mt-3">
                 <span class="icon-close2 js-menu-toggle"></span>
             </div>
         </div>
         <div class="site-mobile-menu-body"></div>
-    </div>
+    </div> -->
 
     <header class="site-navbar" role="banner">
-        <div class="container">
+        <div class="container" style="margin-left: 550px; margin-top: 3px;">
             <div class="row align-items-center">
                 <div class="col-12 col-md-10 d-none d-xl-block">
                     <nav class="site-navigation position-relative text-right" role="navigation">
                         <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
                             <li class="has-children mydropdownlistmenu">
-                                <a><span>Список названий Вьетнамских ИТ-компаний</span></a>
+                                <a class="findbutton2"><span style="color: black; font-size: 20px;">List of Vietnamese IT company names</span></a>
                                 <ul class="dropdown arrow-top" id="mymenudropdownid">
                                     <a class="mymenulistitem" id="menudropdown -index -1"
                                         onclick="myFunction(1, 10)"></a>
@@ -131,39 +193,27 @@
         </div>
     </header>
 
-    <div class="hero" style="background-image: url('./public/images/hero_1.jpg');"></div>
+    <div class="hero" style="background-image: url('./public/images/hero_2.png');"></div>
 
     <header class="site-navbar" role="banner">
-        <div class="container" style="margin-left: -700px;">
+        <div class="container" style="margin-left: -630px;">
             <div class="row align-items-center">
                 <div class="col-12 col-md-10 d-none d-xl-block">
                     <nav class="site-navigation position-relative text-right" role="navigation">
                         <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
-                            <li class="has-children mydropdownlistmenu" style="margin-top: -20px;">
-                                <a><span>Find Company</span></a>
-                                <ul class="dropdown arrow-top" id="mymenudropdownid">
-                                    <a class="mymenulistitem" id="dropdown1" onclick="FindSelect(1)">Find By Company
-                                        Name</a>
-                                    <a class="mymenulistitem" id="dropdown2" onclick="FindSelect(2)">Find By Company's
-                                        Industries</a>
-                                </ul>
-                            </li>
+                            <a class="findbutton" style="color: black;" id="dropdown1" onclick="FindSelect(1)">Find By Name</a>
+                            <a class="findbutton" style="margin-left: 6px; color: black;" id="dropdown2" onclick="FindSelect(2)">Find By Industries</a>
                         </ul>
                     </nav>
                 </div>
             </div>
     </header>
-    <div>
+
+    <div class="search-container" style="margin-top: 2px; margin-left: -262px;">
         <form class="form ajax" id="formajax">
-            <div>
-                <input style="display: flex;" id="companynameinput" type="text" name="company_name"
-                    placeholder="Company Name">
-            </div>
-            <div>
-                <input style="display: none;" id="indusnameinput" type="text" name="industries_name"
-                    placeholder="Industries Name">
-            </div>
-            <input id="submitinput" type="submit" value="Find Company">
+            <input style="display: flex;" id="companynameinput" type="text" name="company_name" placeholder="Company Name">
+            <input style="display: none;" id="indusnameinput" type="text" name="industries_name" placeholder="Industries Name">
+            <button id="submitinput" type="submit"><i class="fa fa-search"></i></button>
         </form>
     </div>
 

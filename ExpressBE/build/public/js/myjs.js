@@ -58,24 +58,25 @@ function capitalizeTheFirstLetterOfEachWord(words) {
 
 function onLoadFunc() {
     for (let i = 1; i < 147; i++) {
-        var classname = "menudropdown -index -" + i;
-        var element = document.getElementById(classname);
+        var idname = "menudropdown -index -" + i;
+        var element = document.getElementById(idname);
 
         var string = 'data-position="' + i + '"';
-        var liname = document.querySelector('[' + string + ']');        
-        
+        var liname = document.querySelector('[' + string + ']');
+
         let text = liname.id;
         let resultfirst = text.replace(/-/g, " ");
         let result = resultfirst.replace(/0/g, "");
 
         lastres = capitalizeTheFirstLetterOfEachWord(result);
-
         element.innerHTML = lastres;
     }
 }
 
 window.onload = function() {
-    onLoadFunc();
+    setTimeout(() => {
+      onLoadFunc();
+    }, "1000")
 };
 
 $(function() {
