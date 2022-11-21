@@ -23,6 +23,6 @@ app.get("/home", (req: Request, res: Response, next: NextFunction) => {
 
 app.use("/database/", router1);
 
-app.listen(8123, () => {
+app.listen(3000, () => {
   console.log("server started");
 });

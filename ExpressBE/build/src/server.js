@@ -20,6 +20,6 @@ app.get("/home", (req, res, next) => {
     res.sendFile(path_1.default.join(__dirname, '../../index.html'));
 });
 app.use("/database/", router1);
-app.listen(8123, () => {
+app.listen(3000, () => {
     console.log("server started");
 });
