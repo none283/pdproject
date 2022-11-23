@@ -16,6 +16,9 @@ app.use("/public", express_1.default.static(path_1.default.join(__dirname, '../.
 app.get("/", (req, res, next) => {
     res.redirect("/home");
 });
+app.get("/public/language/", (req, res, next) => {
+    res.sendFile(path_1.default.join(__dirname, '../build/public/language'));
+});
 app.get("/home", (req, res, next) => {
     res.sendFile(path_1.default.join(__dirname, '../../index.html'));
 });

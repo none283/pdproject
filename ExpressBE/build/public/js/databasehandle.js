@@ -4,6 +4,8 @@ $.ajax({
 })
 .then(data=>{
     console.log(data)
+    server_database_data = data;
+    console.log(server_database_data[1].gioithieu)
     for (let i = 0; i < data.length; i++) {
         const element = data[i];
 
@@ -108,7 +110,7 @@ $.ajax({
                 </li>
             </ul>
             <div class="provider-card__summary">
-                <p>${element.gioithieu}</p>
+                <p class="gioithieuclass">${element.gioithieu}</p>
             </div>            
 
             <div class="provider-card__columns">
@@ -129,9 +131,9 @@ $.ajax({
             <div class="provider-card__notable">
                 <p class="provider-card__heading">Notable Project</p>
                 <div class="provider-card__notable-text">
-                    <p>${element.notable_project}</p>
+                    <p class="notable_class">${element.notable_project}</p>
                     <blockquote>
-                        <p>${element.quotes}</p>
+                        <p class="quotes_class">${element.quotes}</p>
                     </blockquote>
                 </div>
             </div>
@@ -146,12 +148,12 @@ $.ajax({
         $(`.directory-providers__list`).append(item);
 
         if(element.ds_clients != "" && element.ds_clients != null && element.ds_clients != undefined)
-        {            
+        {
             const dsclient_array = element.ds_clients.split(",");
 
             for (let j = 0; j < dsclient_array.length; j++) {
                 const ele2 = dsclient_array[j];
-                
+
                 my_columns_clients_arraylist = $(`<li class="clients-column__item">${ele2}</li>`);
                 $(`.my_columns_clients_arraylist_${element.id}`).append(my_columns_clients_arraylist);
             }

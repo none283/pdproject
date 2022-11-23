@@ -1,6 +1,9 @@
+var server_database_data;
+var index_company_now;
+
 function myFunction(index, maxindex) {
     var string = 'data-position="' + index + '"';
-
+    index_company_now = index;
     for (let i = 1; i <= maxindex; i++) {
       if(i != index)
       {
@@ -64,12 +67,15 @@ function onLoadFunc() {
         var string = 'data-position="' + i + '"';
         var liname = document.querySelector('[' + string + ']');
 
-        let text = liname.id;
-        let resultfirst = text.replace(/-/g, " ");
-        let result = resultfirst.replace(/0/g, "");
-
-        lastres = capitalizeTheFirstLetterOfEachWord(result);
-        element.innerHTML = lastres;
+        if(liname != null)
+        {
+          let text = liname.id;
+          let resultfirst = text.replace(/-/g, " ");
+          let result = resultfirst.replace(/0/g, "");
+  
+          lastres = capitalizeTheFirstLetterOfEachWord(result);
+          element.innerHTML = lastres;
+        }
     }
 }
 

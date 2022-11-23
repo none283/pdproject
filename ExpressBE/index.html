@@ -145,6 +145,55 @@
     body {
         top: 0px !important; 
     }
+
+
+
+    .language-dropbtn {
+        background-color: #3498DB;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        margin-top: -26px;
+    }
+
+    /* Dropdown button on hover & focus */
+    .language-dropbtn:hover, .language-dropbtn:focus {
+        background-color: #2980B9;
+    }
+
+    /* The container <div> - needed to position the dropdown content */
+    .language-dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    /* Dropdown Content (Hidden by Default) */
+    .language-dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        margin-left: 250px;
+        margin-top: 32px;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    /* Links inside the dropdown */
+    .language-dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    /* Change color of dropdown links on hover */
+    .language-dropdown-content a:hover {background-color: #ddd;}
+
+    /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+    .show {display:block;}
 </style>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -169,7 +218,7 @@
                     <nav class="site-navigation position-relative text-right" role="navigation">
                         <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
                             <li class="has-children mydropdownlistmenu">
-                                <a class="findbutton2"><span style="color: black; font-size: 20px;">List of Vietnamese IT company names</span></a>
+                                <a class="findbutton2"><span id="spanlistofcompany" style="color: black; font-size: 20px;">List of Vietnamese IT company names</span></a>
                                 <ul class="dropdown arrow-top" id="mymenudropdownid">
                                     <a class="mymenulistitem" id="menudropdown -index -1"
                                         onclick="myFunction(1, 10)"></a>
@@ -209,8 +258,8 @@
                 <div class="col-12 col-md-10 d-none d-xl-block">
                     <nav class="site-navigation position-relative text-right" role="navigation">
                         <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
-                            <a class="findbutton" style="color: black;" id="dropdown1" onclick="FindSelect(1)">Find By Name</a>
-                            <a class="findbutton" style="margin-left: 6px; color: black;" id="dropdown2" onclick="FindSelect(2)">Find By Industries</a>
+                            <a class="findbutton findbuttonnum1" style="color: black;" id="dropdown1" onclick="FindSelect(1)">Find By Name</a>
+                            <a class="findbutton findbuttonnum2" style="margin-left: 6px; color: black;" id="dropdown2" onclick="FindSelect(2)">Find By Industries</a>
                         </ul>
                     </nav>
                 </div>
@@ -225,15 +274,7 @@
         </form>
     </div>
 
-    <section id="directory-providers" class="directory-providers">
-        <div class="container directory-providers__wrap">
-            <ul class="directory-providers__list" data-pid="2058029500000">
-
-            </ul>
-        </div>
-    </section>
-
-    <div id="google_translate_element" style="margin-top: -40px; margin-left: 38px;"></div>
+    <div id="google_translate_element" style="margin-top: 10px; margin-left: 38px;"></div>
     <script type="text/javascript">
       function googleTranslateElementInit() {
         new google.translate.TranslateElement({
@@ -255,6 +296,76 @@
           });
         });
     </script>
+
+    <div class="language-dropdown">
+        <button onclick="myFunction2()" class="language-dropbtn">Languages</button>
+        <div id="language-myDropdown" class="language-dropdown-content">
+            <a href="#" onclick="setLanguage('en')">English</a>
+            <a href="#" onclick="setLanguage('ru')">Russian</a>
+        </div>
+    </div>
+    <script>
+        var language;
+        function getLanguage(lan) {
+            $.ajax({
+                url: '/public/language/' + lan + '.json', 
+                dataType: 'json',
+                async: false,
+                success: function (lang) {
+                    language = lang
+                }
+            });
+        }
+
+        function setLanguage(lang) {
+            getLanguage(lang);
+
+            $('.findbuttonnum1').text(language.btn_find_by_name);
+            $('.findbuttonnum2').text(language.btn_find_by_industry);
+            $('#spanlistofcompany').text(language.btn_list_company);
+            $('#companynameinput').attr("placeholder", language.input_company_name);
+            $('.language-dropbtn').text(language.btn_languagues);
+
+            if(lang == "en")
+            {
+                $('.gioithieuclass').text(server_database_data[index_company_now - 1].gioithieu);
+                $('.notable_class').text(server_database_data[index_company_now - 1].notable_project);
+                $('.quotes_class').text(server_database_data[index_company_now - 1].quotes);
+            }
+            else if(lang == "ru")
+            {
+                $('.gioithieuclass').text(server_database_data[index_company_now - 1].rus_gioithieu);
+                $('.notable_class').text(server_database_data[index_company_now - 1].rus_notable);
+                $('.quotes_class').text(server_database_data[index_company_now - 1].rus_quotes);
+            }
+        }
+
+        function myFunction2() {
+            document.getElementById("language-myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.language-dropbtn')) {
+                var dropdowns = document.getElementsByClassName("language-dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+
+    <section id="directory-providers" class="directory-providers">
+        <div class="container directory-providers__wrap">
+            <ul class="directory-providers__list" data-pid="2058029500000">
+
+            </ul>
+        </div>
+    </section>
 </body>
 
 <script src="./public/js/common.js"></script>

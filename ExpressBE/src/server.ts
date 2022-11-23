@@ -17,6 +17,10 @@ app.get("/", (req: Request, res: Response, next: NextFunction) => {
   res.redirect("/home");
 });
 
+app.get("/public/language/", (req: Request, res: Response, next: NextFunction) => {
+  res.sendFile(path.join(__dirname, '../build/public/language'));
+});
+
 app.get("/home", (req: Request, res: Response, next: NextFunction) => {
   res.sendFile(path.join(__dirname, '../../index.html'))
 });
