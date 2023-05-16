@@ -6,11 +6,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.mydb = void 0;
 const mysql2_1 = __importDefault(require("mysql2"));
 const pool = mysql2_1.default.createPool({
-    host: "localhost",
+    host: "std-mysql",
     port: 3306,
-    user: "none",
-    password: "noneadmin",
-    database: "pd_schema",
+    user: "std_2229_pd3",
+    password: "28032001",
+    database: "std_2229_pd3",
     waitForConnections: true,
     connectionLimit: 10,
     queueLimit: 0,

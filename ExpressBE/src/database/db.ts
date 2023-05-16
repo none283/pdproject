@@ -1,11 +1,22 @@
 import mysql from "mysql2";
 
+// const pool = mysql.createPool({
+//   host: "std-mysql",
+//   port: 3306,
+//   user: "std_2229_pd3",
+//   password: "28032001",
+//   database: "std_2229_pd3",
+//   waitForConnections: true,
+//   connectionLimit: 10,
+//   queueLimit: 0,
+// });
+
 const pool = mysql.createPool({
-  host: "localhost",
+	host     : 'localhost',
   port: 3306,
-  user: "none",
-  password: "noneadmin",
-  database: "pd_schema",
+	user     : 'root',
+	password : 'password',
+	database : 'pd_schema',
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0,

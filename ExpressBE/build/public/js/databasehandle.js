@@ -13,6 +13,7 @@ $.ajax({
         <li id="${element.id_name}" class="mydataitemclass provider-card" data-sponsorship="NONE" data-position="${element.id}">
         <span aria-label="List position" class="provider-card__position">${element.id}</span>
         <div class="provider-card__intro">
+            <button type="button" onclick="addFavouriteFunc(${element.id})">Add to favourite</button>
             <div class="provider-card__header">
                 <a href="${element.companylink}"
                     target="_blank" rel="nofollow"
@@ -179,6 +180,18 @@ $.ajax({
             }
         }
     }
+})
+.catch(err=>{
+    console.log("API Loi");
+    console.log(err);
+})
+
+$.ajax({
+    url:'/database-account',
+    type:'GET',
+})
+.then(data=>{
+    console.log(data);
 })
 .catch(err=>{
     console.log("API Loi");
